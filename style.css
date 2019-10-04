@@ -1,36 +1,103 @@
-.yesdisplay{
-    display: block !Important;
-  }
-  .ring-size-guide-container{
-    box-sizing: border-box;
-    margin: 0 5px;
-  }
-  .ring-from-selection{
-    display: block;
-  }
-  .ring-to-selection{
-      display: block;
-  }
-  #all-ring-sizes-wrapper{
-    display: flex;
-    flex-direction: row;
-  }
-  #all-ring-sizes-wrapper p {
-    margin: 7px;
-  }
-  #ring-mm-selection, #ring-us-selection, #ring-britain-selection, #ring-japan-selection, #ring-france-selection, #ring-switzerland-selection, #ring-germany-selection{
+.yesdisplay {
+  display: block !important;
+}
+.ring-size-guide-container {
+  box-sizing: border-box;
+  margin: 0 5px;
+}
+.ring-from-selection {
+  display: block;
+}
+.ring-to-selection {
+  display: block;
+}
+#all-ring-sizes-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+#all-ring-sizes-wrapper p {
+  margin: 7px;
+  padding: 2px;
+}
+#all-ring-sizes-wrapper p:nth-child(odd) {
+  background-color: rgb(220, 220, 220);
+}
+#all-ring-sizes-wrapper h3 {
+  padding-right: 30px;
+}
+.ring-mm-selection,
+.ring-us-selection,
+.ring-britain-selection,
+.ring-japan-selection,
+.ring-france-selection,
+.ring-switzerland-selection,
+.ring-germany-selection {
   display: none;
+}
+.ring-mm,
+.ring-us,
+.ring-britain,
+.ring-japan,
+.ring-france,
+.ring-switzerland,
+.ring-germany {
+  display: none;
+}
+.ring-country-display {
+  display: block;
+  flex: 1;
+}
+#tools-needed{
+  text-align: center;
+  font-size: 24px;
+}
+.measuring-tools{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.measuring-tools-img-wrap{
+  flex: 1;
+}
+img.measuring-tools-img{
+  height: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px), and (max-width: 769px) {
+  .ring-size-guide-container{
+    margin: 0 auto;
+    max-width: 80%;
+}
+  .measuring-tools{
+  flex-direction: row;
+    justify-content: space-between;
+}
+.measuring-tools-img-wrap{
+  flex: 1;
+}
+img.measuring-tools-img{
+  height: auto;
+  width: 95%;
+}
+  .measuring-tools h4{
+    text-align: center;
   }
-  .ring-country-display{
-    display: block;
-      flex: 1;
+}
+@media only screen and (min-width: 770px), and (max-width: 1024px) {
+   .ring-size-guide-container{
+    max-width: 70%;
+}
+  img.measuring-tools-img:hover{
+animation: rotation 3s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-  
-  
-  
-  @media only screen and (min-width: 640px), and (max-width: 769px){
-    
+  to {
+transform: rotateY(360deg);
   }
-  @media only screen and (min-width: 770px), and (max-width: 1024px){
-    
-  } 
+}
+
+}
